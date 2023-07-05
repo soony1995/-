@@ -16,8 +16,46 @@
 
 ## **사용법**   
 
+```
+golang으로 작성한 코드입니다.
+
+######<redis-server>#####
+https://hayden-archive.tistory.com/429을 참고해 서버를 설치했다. 
+
+######<redis-client>#####
+package main
+
+import (
+	"fmt"
+
+	"github.com/go-redis/redis"
+)
+
+var DB struct {
+	client *redis.Client
+}
+
+func initDBconn() {
+	DB.client = redis.NewClient(&redis.Options{
+		Addr:     "localhost:36379",
+		Password: "", // no password set
+		DB:       0,  // use default DB
+	})
+}
+
+func main() {
+
+	initDBconn()
+	fmt.Println(DB.client.Set("set-redis-key", "redis-value", 0))
+
+	fmt.Println(DB.client.Get("set-redis-key"))
+}
+
+```
 ## **실제로 사용면서 느낀 점**
+장점:
+현재 로그인 여부, 파일 IO 여부, 트래픽량 트래킹을 redis에 저장하여 사용했을 때 확실히 maria db에 넣어서 쓸 때 보다 조회나 삭제가 자유로워서 편했다.
 
 단점: 
-구조가 없기때문에 value내에서 정교한 검색이 불가능.   
-key값으로만 검색해야하므로 key 디자인을 잘해야함. (구조가 없는게 장점이자 단점 )
+value 값이 다양하게 들어갈 때가 있는데, 구조가 없다보니 가져다 쓰기 불편함이 존재한다. 
+
