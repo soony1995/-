@@ -46,3 +46,7 @@ Stub는 RPC의 핵심 개념으로 Parameter 객체를 Message로 Marshalling/Un
 client의 stub은 함수 호출에 사용된 파라미터의 변환(marshalling) 및 함수 실행 후 서버에서 전달된 결과의 변환 담당 
 
 server의 stub은 클라이언트가 전달한 매개 변수의 역변환(unmarshalling) 및 함수 실행 결과 변환을 담당
+
+
+### 추가 자료
+https://velog.io/@ypo09/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%99%80-gRPC%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%84%9C%EB%B2%84-%EA%B0%84-%ED%86%B5%EC%8B%A0-%EC%A0%81%EC%9A%A9%EA%B8%B0
