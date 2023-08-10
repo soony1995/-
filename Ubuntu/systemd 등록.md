@@ -13,13 +13,13 @@ systemctl은 특정 서비스나 유닛에 대한 상태 확인, 제어, 로깅 
 요약하자면, systemd는 전체적인 ***시스템 관리 프레임워크로서 시스템 부팅 및 서비스 관리, 의존성 처리 등을 담당***하며,    
 systemctl은 ***systemd를 조작하고 관리하기 위한 명령어 도구***입니다.    
 
-![Alt text](image-1.png)
+![Alt text](images/image-system구조.png)
  ***systemd(System daemon)은 시스템 부팅 시 가장 먼저 생성된 후 다른 프로세스를 실행하는 init 역할을 대체한다.***
 
 ## 1. .service 파일 options
 service 섹션 중에서 restart에 관해서 다루기로 한다.
 
-![Alt text](image.png)
+![Alt text](images/image-.service.png)
 > [no | on-success | on-failure | on-watchdog | on-abort | always ]
 
 ### no(기본값)

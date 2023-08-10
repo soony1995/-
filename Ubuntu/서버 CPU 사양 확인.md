@@ -3,7 +3,7 @@
 - core : 멀티코어 프로세서의 독립적인 CPU 인스턴스이다.
 - hardware thread: 한 개의 코어 내에서 multiple thread를 동시에 실행가능한 CPu 아키텍처에서 각 thread는 독립적인 CPU instance로 가능하다. 
 
-![Alt text](image-2.png)
+![Alt text](images/image-하드웨어구조.png)
 출처: https://etloveguitar.tistory.com/62
 ## 서버 CPU 사양 확인
 
