@@ -59,5 +59,5 @@ ICMP 메시지를 발신지 호스트로 보낸다.
    Router가 존재하는 갯수(홉수)만큼 빼면은  TTL이 된다...
 
       255 - Router수(홉수) = TTL      
-
+https://m.blog.naver.com/aka_handa/10081414226
  
